@@ -25,7 +25,11 @@ public abstract class MvpActivity<P extends MvpBasePresenter> extends AppCompatA
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState);
         //绑定View
-        if (this.presenter.attachView(this);)
+        presenter = createPresenter();
+        if (this.presenter != null){
+            this.presenter.attachView(this);
+        }
+
     }
 
     //给子类实现

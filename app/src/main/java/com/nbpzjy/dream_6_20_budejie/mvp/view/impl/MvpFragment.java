@@ -14,7 +14,7 @@ import com.nbpzjy.dream_6_20_budejie.mvp.view.MvpView;
  *
  * 在Fragment里将P和V关联，便于之后的调用
  */
-public class MvpFragment<P extends MvpBasePresenter,V extends MvpView> extends Fragment{
+public abstract class MvpFragment<P extends MvpBasePresenter,V extends MvpView> extends Fragment{
     //<泛型定义>
     private P presenter;
 
@@ -23,7 +23,7 @@ public class MvpFragment<P extends MvpBasePresenter,V extends MvpView> extends F
         super.onActivityCreated(savedInstanceState);
         this.presenter = createPresenter();
         if (this.presenter != null){
-            this.presenter.dettachView(createView());
+            this.presenter.attachView(createView());
         }
     }
 
