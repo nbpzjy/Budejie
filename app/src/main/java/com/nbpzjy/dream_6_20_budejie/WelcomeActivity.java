@@ -3,6 +3,7 @@ package com.nbpzjy.dream_6_20_budejie;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.animation.ObjectAnimator;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.PersistableBundle;
@@ -13,7 +14,9 @@ import android.widget.ImageView;
 /**
  * Created by zjygzc on 16/6/21.
  */
-public class WelcomeActivity extends AppCompatActivity {
+public class WelcomeActivity extends Activity {
+    //继承Activity，之后去清单文件配置全屏
+    //需要继承Activity或者FragementActivity
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,7 +49,11 @@ public class WelcomeActivity extends AppCompatActivity {
             @Override
             public void onAnimationEnd(Animator animation) {
                 super.onAnimationEnd(animation);
-                startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                //启动WelcomeActivity
+                //startActivity(new Intent(WelcomeActivity.this,MainActivity.class));
+                //启动GuideActivity
+                startActivity(new Intent(WelcomeActivity.this,GuideActivity.class));
+
             }
         });
 

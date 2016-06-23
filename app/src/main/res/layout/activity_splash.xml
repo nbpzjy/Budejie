@@ -3,17 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.nbpzjy.dream_6_20_budejie.MainActivity">
 
     <ImageView
         android:id="@+id/imv_splash"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@mipmap/splash_bacground" />
+        android:scaleType="centerCrop"
+        android:src="@mipmap/splash_bacground"/>
 
 
 </RelativeLayout>

@@ -12,15 +12,21 @@
 
         </activity>
 
-        <activity android:name=".WelcomeActivity">
+        <activity android:name=".WelcomeActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            //清单文件配置WelcomeActivity全屏
             <intent-filter>
 
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
 
             </intent-filter>
-
         </activity>
+
+        <activity android:name=".GuideActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
+
     </application>
 
 </manifest>
