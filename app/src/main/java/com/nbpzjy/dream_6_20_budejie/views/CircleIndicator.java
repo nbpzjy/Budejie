@@ -17,6 +17,7 @@ import android.view.animation.Interpolator;
 import android.widget.LinearLayout;
 
 import com.nbpzjy.dream_6_20_budejie.R;
+
 //import com.tz.budejie.R;
 
 import static android.support.v4.view.ViewPager.OnPageChangeListener;
