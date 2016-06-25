@@ -17,9 +17,24 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="24dp"/>
 
-        />
+    //用textview定义一行字“进入主页”以用于在引导页的最后一页调用以进入主页
+    <TextView
+        android:id="@+id/tv_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="进入主页"
+        android:textSize="18sp"
+        android:textColor="@android:color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"/>
+        //android:layout_below="@id/indicator" //这个方法不好用，为什么？
+        //android:layout_marginBottom="10dp"
+
+
+
 
 
 
