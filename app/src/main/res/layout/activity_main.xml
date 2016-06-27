@@ -1,21 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.app.FragmentTabHost
+    android:id="@android:id/tabhost"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.nbpzjy.dream_6_20_budejie.MainActivity">
+    android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/tv_splash"
+
+    //以下帧布局，专门用来存放fragment
+    <FrameLayout
+
+        android:id="@android:id/tabcontent"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Home Page"
-        android:textSize="30dp"
-        android:gravity="center"/>
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/main_content_bg"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_tab_line_height"
+        android:background="@color/main_tab_line_color"/>
+    //tabbar设置开始
+    //tabwiget专门用来存放每一个tab项
+
+    <TabWidget
+        android:id="@android:id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_tab_height"
+        android:layout_gravity="bottom"/>
 
 
-</RelativeLayout>
+</LinearLayout>
+</android.support.v4.app.FragmentTabHost>

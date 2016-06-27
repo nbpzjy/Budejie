@@ -1,7 +1,6 @@
 package com.nbpzjy.dream_6_20_budejie.pro.base.view.fragment;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -29,6 +28,16 @@ import com.nbpzjy.dream_6_20_budejie.mvp.view.impl.MvpFragment;
 public abstract class BaseFragment<P extends MvpBasePresenter,V extends MvpBaseView> extends MvpFragment<P,V> {
     //缓存布局，由于在切换的时候Fragment会被销毁
     private View contentView;
+
+    @Override
+    public P createPresenter() {
+        return null;
+    }
+
+    @Override
+    public V createView() {
+        return null;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

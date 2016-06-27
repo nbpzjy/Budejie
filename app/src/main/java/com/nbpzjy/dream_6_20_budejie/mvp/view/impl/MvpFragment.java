@@ -1,6 +1,7 @@
 package com.nbpzjy.dream_6_20_budejie.mvp.view.impl;
 
-import android.app.Fragment;
+
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 
 import com.nbpzjy.dream_6_20_budejie.mvp.presenter.impl.MvpBasePresenter;
